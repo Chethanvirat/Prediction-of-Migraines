@@ -1,0 +1,261 @@
+<html>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(193, 192, 255);
+            margin: 0;
+            padding: 0;
+        }
+
+        center {
+            margin-top: 1px;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        table {
+            width: 30%;
+            margin: auto;
+            border-collapse: collapse;
+            margin-top: 1px;
+        }
+
+        td {
+            padding: 1px;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 1px;
+            box-sizing: border-box;
+            margin-bottom: 1px;
+        }
+
+        button {
+            background-color: red;
+            color: yellow;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            font-weight: bold;
+            margin-top: 1px;
+        }
+    </style> 
+    <center> 
+        <h1 style="color:red; ">Prediction of Migranes</h1> 
+        <form method=POST>
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>
+                        Age
+                    </td>
+                    <td>
+                        <input type="text" name="textage">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Duration
+                    </td>
+                    <td>
+                        <input type="text" name="textduration">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Frequency
+                    </td>
+                    <td>
+                        <input type="text" name="textfrequency">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Location 
+                    </td>
+                    <td>
+                        <input type="text" name="textlocation">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Character
+                    </td>
+                    <td>
+                        <input type="text" name="textcharacter">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Intensity
+                    </td>
+                    <td>
+                        <input type="text" name="textintensity">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Nausea
+                    </td>
+                    <td>
+                        <input type="text" name="textnausea">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Vomit
+                    </td>
+                    <td>
+                        <input type="text" name="textvomit">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phonophobia
+                    </td>
+                    <td>
+                        <input type="text" name="textphonophobia">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Photophobia
+                    </td>
+                    <td>
+                        <input type="text" name="textphotophobia">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Visual
+                    </td>
+                    <td>
+                        <input type="text" name="textvisual">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Sensory
+                    </td>
+                    <td>
+                        <input type="text" name="textsensory">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Dysphasia
+                    </td>
+                    <td>
+                        <input type="text" name="textdysphasia">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Dysarthria
+                    </td>
+                    <td>
+                        <input type="text" name="textdysarthria">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Vertigo
+                    </td>
+                    <td>
+                        <input type="text" name="textvertigo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Tinnitus
+                    </td>
+                    <td>
+                        <input type="text" name="texttinnitus">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hypoacusis
+                    </td>
+                    <td>
+                        <input type="text" name="texthypoacusis">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Diplopia
+                    </td>
+                    <td>
+                        <input type="text" name="textdiplopia">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Defect
+                    </td>
+                    <td>
+                        <input type="text" name="textdefect">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ataxia
+                    </td>
+                    <td>
+                        <input type="text" name="textataxia">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Conscience
+                    </td>
+                    <td>
+                        <input type="text" name="textconscience">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Paresthesia
+                    </td>
+                    <td>
+                        <input type="text" name="textparesthesia">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Dpf
+                    </td>
+                    <td>
+                        <input type="text" name="textdpf">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" class="btn btn-primary" name="buttonpredict" >Predict</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{result}}
+                    </td>
+                </tr>
+            </table>
+        </center>
+        </form>
+</html>
+
+
+
+
